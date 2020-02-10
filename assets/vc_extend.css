@@ -127,7 +127,8 @@
   
   .ptc-logs-card .ptc-logs-general .ptc-logs-more {
     position: relative;
-    font-size: 0.88em;
+    font-size: 15px;
+    line-height: 1 !important;
   }
   
   .ptc-device-status-history{
@@ -157,7 +158,8 @@
     color: white;
   }
   
-  .heading {
+  .ptc-logs-general .headingDid .heading,
+  .ptc-logs-more-info .cta.heading {
       font-size: 27px;
       margin:0;
       padding-top: 10px;
