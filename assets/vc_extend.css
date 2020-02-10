@@ -1,0 +1,218 @@
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+  }
+  
+  .ptc-logs-card {
+    width: 450px;
+    height: 100px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+  } 
+  
+  .ptc-logs-card .ptc-logs-additional {
+    position: absolute;
+    width: 115px;
+    height: 100%;
+    background: linear-gradient(45deg,#F1467A,#FB949E);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+  
+  .ptc-logs-card.green .ptc-logs-additional {
+    background: linear-gradient(45deg,#27A47C,#6FE594);
+  }
+  
+  
+  .ptc-logs-card:hover .ptc-logs-additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-user-card {
+    width: 115px;
+    height: 100%;
+    position: relative;
+    float: left;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0,0,0,0.025);
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-user-card .ptc-logs-level,
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-user-card .ptc-logs-points {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: rgba(0,0,0,0.15);
+    padding: 0.01rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-user-card .ptc-logs-points {
+    top: 75%;
+  }
+  
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-more-info {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 130px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .ptc-logs-card.green .ptc-logs-additional .ptc-logs-more-info h1 {
+    color: white;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .ptc-logs-card.green .ptc-logs-additional .coords {
+    color: #325C46;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-coords span + span {
+    float: right;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+  }
+  
+  .ptc-logs-general {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+  }
+  
+  .ptc-logs-card .ptc-logs-general .ptc-logs-more {
+    position: relative;
+    font-size: 0.88em;
+  }
+  
+  .ptc-device-status-history{
+    color: white;
+    text-align: center;
+    padding: 15% 0;
+    font-size: xx-large;
+  }
+  
+  .headingDid {
+    margin-left: 125px;
+  }
+  
+    .content {
+      width: 72%;
+      position: relative;
+      margin-left: 125px;
+      overflow: auto;
+    }
+  
+  .cta {
+      text-align: left;
+      padding-left: 15px;
+  }
+  
+  .link {
+    color: white;
+  }
+  
+  .heading {
+      font-size: 27px;
+      margin:0;
+      padding-top: 10px;
+  }
+  
+  #ppcFacts {
+      position: fixed;
+      left: 15em;
+      bottom: 4em;
+      z-index: 99999;
+  }
+  
+  .hideBar {
+      opacity: 0;
+      transition: opacity 0.5s
+  }
+  
+  .showBar {
+      opacity: 1;
+      transition: opacity 0.5s
+  }
+  
+  /*Responsive*/
+  @media all and (max-width:720px) {
+  .ptc-logs-card {
+      margin: 1.5rem;
+      width: 336px;
+      left: -65px;
+  }
+  h1 {
+      display: none;
+  }
+  
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-coords {
+      font-size: 1rem;
+  }
+  .content {
+      width:62%;
+  }
+  .ptc-logs-card .ptc-logs-additional .ptc-logs-coords {
+      margin: 2.4rem;
+  }
+  
+  #ppcFacts {
+      position: fixed;
+      bottom : inherit;
+      top: 4em;
+      z-index: 99999;
+  }
+  
+  #FistHeader > div > div > div > div.qodef-elements-holder.qodef-one-column.qodef-responsive-mode-768 > div > div > div > div > div > h1 > span {
+      font-size: 40px;
+  }
+  
+  }
+  /*End Responsive*/
+  
+  /* Did you know CSS end */
