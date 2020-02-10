@@ -21,7 +21,7 @@ class VCExtendAddonClass {
         add_shortcode( 'bartag', array( $this, 'renderMyBartag' ) );
 
         // Register CSS and JS
-        add_action( 'wp_enqueue_scripts', array( $this, 'loadCssAndJs' ) );
+        add_action( 'wp_footer', array( $this, 'loadCssAndJs' ) );
 
         add_action( 'wp_footer', array( $this, 'showAll' ) );
     }
@@ -68,6 +68,10 @@ class VCExtendAddonClass {
       ), $atts ) );
       //$content = wpb_js_remove_wpautop($content, true); // fix unclosed/unwanted paragraph tags in $content
 
+      //wp_enqueue_script( 'vc_extend_js', plugins_url('assets/jquery-3.4.1.min.js', __FILE__), array('jquery') );
+      //echo plugin_dir_path(__DIR__) ;
+      echo '<script src="' . plugin_dir_url( __FILE__ ) . 'assets/jquery-3.4.1.min.js' . '"></script>';
+      echo '<style href="' . plugin_dir_url( __FILE__ ) . 'assets/vc_extend.css' . '"></style>';
 
       $output = '<div class="center">
         <div class="ptc-logs-card green">
@@ -131,8 +135,6 @@ class VCExtendAddonClass {
     public function loadCssAndJs() {
       wp_register_style( 'vc_extend_style', plugins_url('assets/vc_extend.css', __FILE__) );
       wp_enqueue_style( 'vc_extend_style' );    
-      
-      wp_enqueue_script( 'vc_extend_js', plugins_url('assets/jquery-3.4.1.min.js', __FILE__), array('jquery') );
     }
 
     public function showAll($atts) {
